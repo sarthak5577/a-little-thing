@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You ♡</title>
+
+    <meta name="theme-color" content="#0b0809">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Italianno&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         AMBIENT EFFECTS
+    ====================================================== -->
+
+    <div class="grain"></div>
+
+    <div class="cursor-glow"></div>
+
+    <div class="petals" id="petals"></div>
+
+
+    <!-- =====================================================
+         BACKGROUND MUSIC
+         
+         IMPORTANT:
+         Put your audio file inside:
+         
+         audio/background.m4a
+         
+         The JavaScript will control:
+         - Start
+         - Volume
+         - Fade out for video
+         - Fade back in after video
+    ====================================================== -->
+
+    <audio
+        id="backgroundMusic"
+        preload="auto"
+        loop>
+
+        <source
+            src="audio/background.m4a"
+            type="audio/mp4">
+
+        Your browser does not support audio.
+
+    </audio>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="hero">
+
+        <div class="hero-orbit orbit-one"></div>
+
+        <div class="hero-orbit orbit-two"></div>
+
+
+        <div class="hero-content">
+
+            <p class="eyebrow hero-fade">
+                I made something for you
+            </p>
+
+
+            <div class="tiny-heart hero-fade">
+                ♡
+            </div>
+
+
+            <h1>
+                The Little
+                <em>Things.</em>
+            </h1>
+
+
+            <p class="hero-description hero-fade">
+
+                Six memories.<br>
+
+                A thousand little feelings.<br>
+
+                One person I am really grateful for.
+
+            </p>
+
+
+            <!--
+                THIS BUTTON STARTS THE EXPERIENCE.
+
+                JavaScript will use this click to:
+                1. Start background music
+                2. Scroll to the memories
+            -->
+
+            <button
+                class="begin-btn"
+                id="beginBtn"
+                type="button">
+
+                <span>
+                    Take your time
+                </span>
+
+                <b>
+                    ↓
+                </b>
+
+            </button>
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+            <span></span>
+
+            scroll slowly
+
+            <span></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="intro-section">
+
+        <div class="intro-glow"></div>
+
+
+        <div class="intro-content reveal">
+
+            <span class="section-number">
+                01 — somewhere along the way
+            </span>
+
+
+            <div class="script-word">
+                somewhere...
+            </div>
+
+
+            <h2>
+
+                I don't remember<br>
+                the exact moment.
+
+            </h2>
+
+
+            <p>
+
+                You just slowly became part of my everyday life.
+                Somewhere between the conversations, the random
+                moments, the laughter and the ordinary days...
+                you became one of my favourite parts of them.
+
+            </p>
+
+
+            <div class="heart-divider">
+                ♡
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEMORY 01
+    ====================================================== -->
+
+    <section class="memory memory-one">
+
+        <div class="memory-number">
+            01
+        </div>
+
+
+        <div class="memory-photo photo-one reveal-photo tilt-card">
+
+            <div class="photo-paper">
+
+                <div class="photo-shine"></div>
+
+
+                <img
+                    src="images/photo1.jpg"
+                    alt="Our first memory">
+
+
+                <span class="photo-number">
+                    01
+                </span>
+
+            </div>
+
+
+            <p class="photo-caption">
+                one of my favourite memories
+            </p>
+
+        </div>
+
+
+        <div class="memory-note note-one reveal">
+
+            <span>
+                the beginning
+            </span>
+
+
+            <p>
+
+                Some memories become special
+                without us even realizing it.
+
+            </p>
+
+
+            <small>
+
+                and somehow, this one did.
+
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEMORY 02
+    ====================================================== -->
+
+    <section class="memory memory-two">
+
+        <div class="memory-note note-two reveal">
+
+            <span>
+                02 — the little moments
+            </span>
+
+
+            <div class="script-word small-script">
+                ordinary days...
+            </div>
+
+
+            <h2>
+
+                It was never<br>
+                about perfect days.
+
+            </h2>
+
+
+            <p>
+
+                It was about having someone who could
+                make an ordinary day feel a little different.
+
+            </p>
+
+
+            <div class="mini-heart">
+                ♡
+            </div>
+
+        </div>
+
+
+        <div class="memory-photo photo-two reveal-photo tilt-card">
+
+            <div class="photo-paper">
+
+                <div class="photo-shine"></div>
+
+
+                <img
+                    src="images/photo2.jpg"
+                    alt="A memory of us">
+
+
+                <span class="photo-number">
+                    02
+                </span>
+
+            </div>
+
+
+            <p class="photo-caption">
+                just one of those days
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEMORY 03 + 04
+    ====================================================== -->
+
+    <section class="memory memory-three">
+
+        <div class="memory-three-intro reveal">
+
+            <span>
+                03 — 04
+            </span>
+
+
+            <p>
+                two moments I kept
+            </p>
+
+        </div>
+
+
+        <div class="memory-photo photo-three reveal-photo tilt-card">
+
+            <div class="photo-paper">
+
+                <div class="photo-shine"></div>
+
+
+                <img
+                    src="images/photo3.jpg"
+                    alt="A memory of us">
+
+
+                <span class="photo-number">
+                    03
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory-photo photo-four reveal-photo tilt-card">
+
+            <div class="photo-paper">
+
+                <div class="photo-shine"></div>
+
+
+                <img
+                    src="images/photo4.jpg"
+                    alt="A memory of us">
+
+
+                <span class="photo-number">
+                    04
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory-three-text reveal">
+
+            <p>
+                two moments.
+            </p>
+
+
+            <h2>
+
+                Somehow,<br>
+                both stayed.
+
+            </h2>
+
+
+            <span class="handwritten">
+
+                maybe that's what makes them special.
+
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CINEMATIC MEMORY
+    ====================================================== -->
+
+    <section class="cinematic-memory">
+
+        <div class="cinematic-image">
+
+            <img
+                src="images/photo5.jpg"
+                alt="A special memory">
+
+
+            <div class="cinematic-vignette"></div>
+
+            <div class="image-overlay"></div>
+
+        </div>
+
+
+        <div class="cinematic-text reveal">
+
+            <span>
+                05 — this one
+            </span>
+
+
+            <div class="script-word">
+                I remember...
+            </div>
+
+
+            <h2>
+
+                I could look at this<br>
+                and remember everything.
+
+            </h2>
+
+
+            <p>
+
+                The kind of moment you don't know
+                you'll miss until much later.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VIDEO MEMORY
+    ====================================================== -->
+
+    <section
+        class="video-section"
+        id="videoSection">
+
+
+        <div class="video-heading reveal">
+
+            <span>
+                06 — moving memories
+            </span>
+
+
+            <div class="script-word">
+                some things should move...
+            </div>
+
+
+            <h2>
+
+                Some moments<br>
+                deserve to move.
+
+            </h2>
+
+        </div>
+
+
+        <div class="video-wrapper reveal-video">
+
+            <div class="video-frame-glow"></div>
+
+
+            <!--
+                IMPORTANT:
+                "loop" has been removed.
+
+                This allows JavaScript to detect
+                when the video finishes and restart
+                the background music.
+            -->
+
+            <video
+                id="memoryVideo"
+                src="video/memory.MOV"
+                playsinline
+                preload="auto"
+                controlslist="nodownload noplaybackrate">
+            </video>
+
+
+            <div class="video-dark"></div>
+
+
+            <!-- VIDEO PLAY BUTTON -->
+
+            <button
+                class="video-play"
+                id="videoPlay"
+                type="button">
+
+                <span>
+                    Play memory
+                </span>
+
+                <strong>
+                    ↗
+                </strong>
+
+            </button>
+
+
+            <!-- VIDEO SOUND BUTTON -->
+
+            <button
+                class="sound-toggle"
+                id="soundToggle"
+                type="button"
+                aria-label="Turn sound on">
+
+                🔇
+
+            </button>
+
+
+            <div class="video-label">
+
+                a moment worth keeping
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL MEMORY
+    ====================================================== -->
+
+    <section class="final-memory">
+
+        <div class="final-stars"></div>
+
+
+        <div class="final-photo reveal-photo">
+
+            <div class="final-photo-frame tilt-card">
+
+                <div class="photo-shine"></div>
+
+
+                <img
+                    src="images/photo6.jpg"
+                    alt="Our favourite memory">
+
+
+                <div class="final-photo-mark">
+                    ♡
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="final-text reveal">
+
+            <span>
+                07 — and then there's this
+            </span>
+
+
+            <div class="script-word">
+                my favourite...
+            </div>
+
+
+            <h2>
+
+                My favourite kind<br>
+                of memory is you.
+
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SURPRISE
+    ====================================================== -->
+
+    <section class="surprise-section">
+
+        <div class="surprise-content reveal">
+
+            <span>
+                before you leave...
+            </span>
+
+
+            <h2>
+
+                There is<br>
+                one more thing.
+
+            </h2>
+
+
+            <button
+                class="open-heart"
+                id="openHeart"
+                type="button">
+
+                <span>
+                    Open it
+                </span>
+
+                <b>
+                    ♡
+                </b>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL LETTER
+    ====================================================== -->
+
+    <section
+        class="letter-section"
+        id="letterSection">
+
+
+        <div class="letter-glow"></div>
+
+
+        <div class="letter reveal">
+
+            <div class="letter-top">
+
+                <span>
+                    for you
+                </span>
+
+
+                <span>
+                    ♡
+                </span>
+
+            </div>
+
+
+            <div class="letter-body">
+
+                <div class="script-word">
+                    one last thing...
+                </div>
+
+
+                <h2>
+                    Thank you.
+                </h2>
+
+
+                <p>
+
+                    For being here.<br>
+                    For staying.<br>
+                    For all the little moments<br>
+                    that somehow became big ones.
+
+                </p>
+
+
+                <div class="letter-line"></div>
+
+
+                <p class="final-message">
+
+                    I don't know what the future
+                    looks like, but I'm really glad
+                    that somewhere in it...
+                    there was you.
+
+                </p>
+
+
+                <div class="signature">
+
+                    I'm really glad it's you.
+
+                    <span>
+                        ♡
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="ending">
+
+            made with love · 2026
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
